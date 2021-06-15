@@ -2,7 +2,7 @@
 local sh = require("shell")
 
 local git = sh.cmd("command", "-v", "git"):output()
-sh.cmd(git, "status"):exec()
+-- sh.cmd(git, "status"):exec()
 
 -- @todo error text should be held in an Error object type thing
 local is_git_dir = sh.cmd(git, "rev-parse", "--is-inside-work-tree")
